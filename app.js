@@ -34,7 +34,7 @@ app.post("/contact", (req, res) => {
 
     if (emailTo === 'sales') {
         // TODO CHANGE TO REAL EMAIL'S
-        option = 'gonzalezmoralesmauricioo@gmail.com';
+        option = 'sales@ssnegroup.com';
         tipoConsulta = "Quotation";
     } else if (emailTo === 'services') {
         option = 'customer.service@ssnegroup.com';
