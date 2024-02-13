@@ -14,16 +14,16 @@ window.addEventListener("load", () => {
 });
 
 // Funcion para scroll correcto
-$(document).ready(function() {
-    $('.nav-link').on('click', function(event) {
-      event.preventDefault();
-      const target = $(this.getAttribute('href'));
-      const targetPosition = target.offset().top;
-  
-      // Scroll to the target position, minus the height of the sticky navbar
-      $('html, body').animate({ scrollTop: targetPosition - 70, behavior: 'smooth' }, 10);
+$(document).ready(function () {
+    $('.nav-link').on('click', function (event) {
+        event.preventDefault();
+        const target = $(this.getAttribute('href'));
+        const targetPosition = target.offset().top;
+
+        // Scroll to the target position, minus the height of the sticky navbar
+        $('html, body').animate({ scrollTop: targetPosition - 75, behavior: 'smooth' }, 10);
     });
-  });
+});
 
 // Funcion Scroll to top 
 

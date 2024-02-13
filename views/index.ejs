@@ -9,7 +9,10 @@
         content="Facility, Gas Delivery Systems, Design, Analysis Prototyping & Testing. Semiconductor">
     <meta name="author" content="Semiconductor">
 
-    <title>SSNE</title>
+    <!-- Font Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,6 +23,7 @@
     <!-- FAVICON -->
     <link rel="icon" href="/images/FaviconSSNE.png">
 
+    <title>SSNE</title>
     <!-- RECAPTCHA -->
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -63,11 +67,15 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="#SERVICES">SERVICES</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#ABOUTUS">ABOUT US</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#SERVICES">SERVICES</a>
+                        <a class="nav-link" href="#MAINTENANCE">MAINTENANCE</a>
                     </li>
 
                     <li class="nav-item">
@@ -79,17 +87,29 @@
                     </li>
 
                 </ul>
-                <a class="navbar-brand LogoNavBar">
+                <!-- <a class="navbar-brand LogoNavBar">
                     <img src="/images/LogoSSNESign.png" alt="SSNE GROUP" width="80" height="80">
-                </a>
+                </a> -->
             </div>
         </div>
     </nav>
 
     <!-- HOME -->
-    <section class="BackgroundHome" style="margin-bottom: 3.5rem;">
+    <section id="banner">
+        <div class="contenido-banner">
+            <img class="mb-3" style="max-width: 10rem; max-height: 10rem;" src="/images/LogoSSNESign.png" alt="">
+            <h3 class="pb-5 mb-5">We utilize the latest technology necessary to deliver cost effective solutions within
+                a short lead time.</h3>
+        </div>
+    </section>
 
-        <div class="container">
+    <!-- SERVICES WAS HOME -->
+    <section class="BackgroundHome pt-5" style="margin-bottom: 3.5rem;">
+
+        <div class="container" id="SERVICES">
+
+            <!-- <h1 class="text-center fw-bold mb-3 p-3" style="font-size: 3rem;">Welcome to SSNE Group</h1> -->
+
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -143,14 +163,11 @@
 
         <!-- TITULO -->
 
-        <section class="w-75 mx-auto text-center pt-3" id="intro">
-            <h1 class="p-3" style="font-size: 2.8rem;">Facility, Gas Delivery
+        <section class="w-75 mx-auto text-center pt-1" id="intro">
+            <h1 class="pt-5 pb-3" style="font-size: 2rem; margin-top: 2.5rem; color: #555555;">Facility, Gas Delivery
                 Systems, Design, Analysis Prototyping & Testing
             </h1>
-            <p class="p-1 fs-4">We utilize the latest technology necessary to deliver cost effective solutions within a
-                short lead time.</p>
         </section>
-
 
         <!-- CARDS RESPONSIVE CON FLIP CARD EFFECT 3D -->
 
@@ -207,6 +224,11 @@
                 </div>
             </div>
         </div>
+
+        <div class="w-75 mx-auto text-center pt-1">
+            <p class="fs-5">We utilize the latest technology necessary to deliver cost effective solutions within a
+                short lead time.</p>
+        </div>
     </section>
 
     <!-- ABOUT US! -->
@@ -240,17 +262,14 @@
                     We strive to develop products and solutions that will enable our clients to gain competitive edge in
                     their industry.</p>
             </div>
-        </div>
 
-        </div>
 
-        <div id="SERVICES"></div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="container-fluid Services">
+    <!-- MAINTENANCE WAS SERVICES -->
+    <section class="container-fluid Services" id="MAINTENANCE">
         <div class="w-50 m-auto text-center" id="ServicesTitle">
-            <h1 class="mt-5 fw-bold">Services</h1>
+            <h1 class="mt-5 fw-bold">Maintenance</h1>
             <p class="p-2">We apply technical and scientific knowledge to offer you the solution you are looking for,
                 with the necessary resources to the development of the project you need.</p>
         </div>
@@ -284,15 +303,16 @@
                 </ul>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <img class="m-auto mb-5 img-fluid d-flex" style="width: 14rem; object-fit: cover;"
-                    src="/images/ServicesSection/Semiconductor.png" alt="">
+                <img class="m-auto mb-5 img-fluid d-flex InterRight ImgServicesInter"
+                    style="width: 14rem; object-fit: cover;" src="/images/ServicesSection/Semiconductor.png"
+                    alt="Semiconductor" id="SemiConductorImage">
             </div>
         </div>
 
         <div class="row w-75 m-auto border-2 border-bottom my-5 filaServices">
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <img class="m-auto mb-2 img-fluid d-flex" style="width: 80%;"
-                    src="/images/ServicesSection/SolarEnergy.png" alt="">
+                <img class="m-auto mb-2 img-fluid d-flex InterLeft ImgServicesInter" style="width: 80%;"
+                    src="/images/ServicesSection/SolarEnergy.png" alt="SolarEnergy" id="SolarImage">
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 mb-2">
                 <h3 class="fw-bold">Solar Renewable Energy Industry</h3>
@@ -452,6 +472,9 @@
         </div>
     </footer>
 
+    <!-- INTERSECTION OBSERVER JS -->
+    <script src="/javascripts/intersectionObserver.js"></script>
+
     <!-- Usando la CDN de jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -460,15 +483,6 @@
 
     <!-- SWEET ALERT 2 .JS -->
     <script src="/javascripts/sweetalert2.js"></script>
-
-    <!-- EMAIL.JS -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("cMf0d_HMqW0WvMvNM");
-        })();
-    </script> -->
 
     <!-- loader, scroll to top, correct scroll -->
     <script src="/javascripts/main.js"></script>
